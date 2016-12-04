@@ -16,7 +16,7 @@
 
 <div ng-repeat='x in list track by $index'> 
 
-	<img src="{{x.url}}">
+	<img ng-src="{{x.url}}">
 
 	<br>
 
@@ -37,10 +37,10 @@
 
  </div>
 
-<script type="text/javascript" src='node_modules/angular/angular.js'></script>
-<script type="text/javascript" src='app2.js'></script>
-<script type="text/javascript" src='factory.js'></script>
-<script type="text/javascript" src='controller.js'></script>
+<script type="text/javascript" src='angular/angular.js'></script>
+<script type="text/javascript" src='js/app2.js'></script>
+<script type="text/javascript" src='js/services/factory.js'></script>
+<script type="text/javascript" src='js/controllers/controller.js'></script>
 
 </body>
 </html>
