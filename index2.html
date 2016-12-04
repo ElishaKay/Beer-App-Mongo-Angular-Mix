@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body ng-app='ngApp'>
+
+ <div ng-controller='ngCtrl'> 
+ 
+  <input type="text" placeholder="Title" ng-model='toDo'>
+  <input type="text" name="input2" placeholder="Image" ng-model='url'>
+  <input type="text" name="input2" placeholder="Description" ng-model='description'>
+  <input type="number" name="input2" placeholder="Rate out of 5" ng-model='rate'>
+  
+  <button ng-click='addToDo()'>Add</button>
+
+<div ng-repeat='x in list track by $index'> 
+
+	<img src="{{x.url}}">
+
+	<br>
+
+{{x.name}}
+
+	<br>
+
+    {{x.description}}
+
+    <br>
+
+    {{x.rate}} / 5
+
+	<button ng-click='Remove($index)'>Remove</button>
+</div>
+
+
+
+ </div>
+
+<script type="text/javascript" src='node_modules/angular/angular.js'></script>
+<script type="text/javascript" src='app2.js'></script>
+<script type="text/javascript" src='factory.js'></script>
+<script type="text/javascript" src='controller.js'></script>
+
+</body>
+</html>
