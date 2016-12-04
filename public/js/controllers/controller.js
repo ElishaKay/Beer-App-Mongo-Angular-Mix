@@ -1,7 +1,10 @@
-
-
 app.controller('ngCtrl', function($scope, beers) {
-   $scope.beers = beers.beers;
+
+   beers.getAll().then(function(result){
+       $scope.beers = beers.beers;
+   });
+
+  
     
 
 

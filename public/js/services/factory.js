@@ -1,22 +1,17 @@
-// // only var in factory 
 
-// app.factory('ngfactory', function(){
-//  	var list = [];
-
-//  	return {list : list}
-//   });
-
-
-// Below: The New code
 
 app.factory('beers', ['$http', function ($http) {
   var beerService = {
     beers: []
   };
 
-  beerService.getAll = function () {
-    // blank for now
-  };
+ beerService.getAll = function () {
+  return $http.get('/beers').success(function (data) {
+    // this copies the response posts to the client side
+    // 'beers' under 'beerService'
+    angular.copy(data, beerService.beers);
+  });
+};
 
   return beerService;
 }]);
