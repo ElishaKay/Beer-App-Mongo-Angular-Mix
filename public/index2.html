@@ -1,38 +1,82 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title></title>
+  <title>Beer List App</title>
+
+   <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/landing-page.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
 </head>
+
+
 <body ng-app='ngApp'>
 
  <div ng-controller='ngCtrl'> 
  
-  <input type="text" placeholder="Title" ng-model='toDo'>
-  <input type="text" name="input2" placeholder="Image" ng-model='url'>
-  <input type="text" name="input2" placeholder="Description" ng-model='description'>
-  <input type="number" name="input2" placeholder="Rate out of 5" ng-model='rate'>
-  
-  <button ng-click='addToDo()'>Add</button>
+ <div class="intro-header">
+        <div class="container">
 
-<div ng-repeat='x in list track by $index'> 
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="intro-message">
+                      <h1>Landing Page</h1>
+                      <h3>A Template by Start Bootstrap</h3>
+                      <hr class="intro-divider">
 
-	<img ng-src="{{x.url}}">
+                      <input type="text" placeholder="Title" ng-model='toDo'>
+                      <input type="text" name="input2" placeholder="Image" ng-model='url'>
+                      <input type="text" name="input2" placeholder="Description" ng-model='description'>
+                      <input type="number" name="input2" placeholder="Rate out of 5" ng-model='rate'>
 
-	<br>
+                      <button ng-click='addToDo()'>Add</button>
 
-{{x.name}}
+                      <div ng-repeat='x in list track by $index'> 
 
-	<br>
+                        <img ng-src="{{x.url}}">
 
-    {{x.description}}
+                        <br>
 
-    <br>
+                        {{x.name}}
 
-    {{x.rate}} / 5
+                        <br>
 
-	<button ng-click='Remove($index)'>Remove</button>
-</div>
+                        {{x.description}}
 
+                        <br>
+
+                        {{x.rate}} / 5
+
+                        <button ng-click='Remove($index)'>Remove</button>
+                      </div>
+
+
+                        <ul class="list-inline intro-social-buttons">
+                            <li>
+                                <a href="https://twitter.com/SBootstrap" class="btn btn-default btn-lg"><span class="network-name">Text</span></a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/IronSummitMedia/startbootstrap" class="btn btn-default btn-lg"> <span class="network-name">Text</span></a>
+                            </li>
+                            <li>
+                                <a href="#" class="btn btn-default btn-lg"><span class="network-name">Text</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+
+ 
 
 
  </div>
