@@ -1,7 +1,7 @@
 
 
-app.controller('ngCtrl', function($scope, ngfactory) {
-   $scope.list = ngfactory.list;
+app.controller('ngCtrl', function($scope, beers) {
+   $scope.beers = beers.beers;
     
 
 
@@ -14,11 +14,11 @@ app.controller('ngCtrl', function($scope, ngfactory) {
    	}
    	console.log($scope.list)
 
-   $scope.list.push(toDo)   	
+   $scope.beers.push(toDo)   	
 }
 
 $scope.Remove = function (x){
- $scope.list.splice(x,1)
+ $scope.beers.splice(x,1)
  console.log("here");
 }
 })
